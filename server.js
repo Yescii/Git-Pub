@@ -11,8 +11,12 @@ app.get("/drinks", (req, res) => {
   res.render("drinks_index.ejs", { drinks: drinks });
 });
 
+// app.get("/drinks/:id", (req, res) => {
+//   res.render("drinks_show.ejs", { index: req.params.id });
+// });
+
 app.get("/drinks/:id", (req, res) => {
-  res.render("drinks_show.ejs", { index: req.params.id });
+  res.render("drinks_show.ejs", { drink: drinks[req.params.id] });
 });
 
 app.listen(port, () => {});
