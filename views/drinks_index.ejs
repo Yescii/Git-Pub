@@ -16,8 +16,8 @@
     </style>
     <h1>Welcome to gitPub</h1>
     <ul>
-      <% drinks.forEach(drink =>{ %>
-      <li><%= drink.name %></li>
+      <% drinks.forEach((drink, idx) =>{ %>
+      <li><a href="<%= `/drinks/${idx}` %>"> <%= drink.name %> </a></li>
       <% }) %>
     </ul>
   </body>
