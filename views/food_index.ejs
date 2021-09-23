@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>gitPub</title>
+  </head>
+  <body>
+    <style type="text/css">
+      body {
+        color: blanchedalmond;
+        background-color: rgb(180, 123, 70);
+      }
+      li {
+        text-transform: capitalize;
+      }
+    </style>
+    <h1>Welcome to gitPub</h1>
+    <ul>
+      <% foods.forEach((food, idx) =>{ %>
+      <li><a href="<%= `/foods/${idx}` %>"> <%= food.name %> </a></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
